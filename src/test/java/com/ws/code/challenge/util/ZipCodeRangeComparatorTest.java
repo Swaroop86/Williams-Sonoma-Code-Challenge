@@ -9,9 +9,18 @@ import org.junit.Test;
 
 import com.ws.code.challenge.model.ZipCodeRange;
 
+/**
+ * Test class to test the ZipCodeRangeComparator
+ * 
+ * @author Swaroop Shivarudrappa
+ *
+ */
 public class ZipCodeRangeComparatorTest {
 	
 	@Test
+	/**
+	 * Method tests if the input gets sorted
+	 */
 	public void testSort() {
 		ZipCodeRange range1 = new ZipCodeRange(94133, 94166);
 		ZipCodeRange range2 = new ZipCodeRange(96400, 96800);
