@@ -31,7 +31,17 @@
   <li>Maven 3 or above</li>
 </ul>
 
-<h2>EXECUTION</h2>
+<h2>Implementation</h2>
+<p>The problem states that given a range of zip code we need to minimize the range if possible. This can happen only if ranges overlap. Below are the implementation steps</p>
+<ul>
+  <li><strong>1. Need to validate input for any invalid data, if everything looks good tranform them to ZipCodeRange objects which contains upperbound and lowerbound attributes to hold the result</strong></li>
+  <li><strong>2. Once the input is available the algorithm to minimize range is present in validateRange method MinZipCodeRangeService class</strong></li>
+  <li><strong>3. To determine the overlapping ranges, we sort the list of ranges and then scan linerally to check if there is any overlap, if found we keep merging</strong></li>
+  <li>Time complexity : To sort the list of zipcode ranges for 1 input is O(nlogn) where n is the length of 1 input. Then to scan linerally we need o(n) time hence T = O(nlogn+n) which transforms to O(nlogn), for list of inputs the time conplextiy is O(l*nlogn) where l is the length of input and n is the length of each input.</strong></li>
+  <li>space complexity : Will be O(n)</strong></li>
+</ul>
+
+<h2>Execution</h2>
 <p>To execute the program you need to clone the repo https://github.com/Swaroop86/Williams-Sonoma-Code-Challenge.git</p>
 <p>Executing from terminal / command line</p>
 <ul>
