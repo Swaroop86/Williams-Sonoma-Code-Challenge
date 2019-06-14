@@ -31,7 +31,7 @@ public class FileUtil {
 		try {    
 			input = Files.readAllLines(Paths.get(FileUtil.class.getClassLoader().getResource("input.txt").toURI()));			
 		} catch (IOException e) {
-			logger.error("IO or URI Syntax Exception which accessing the file: "+e);			
+			logger.error("IO Exception while accessing the file: "+e);			
 		} catch(Exception e) {
 			logger.error("EXception which accessing the file: "+e);
 		}
