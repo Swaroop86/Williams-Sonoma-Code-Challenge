@@ -14,7 +14,27 @@ public class FileUtilTest {
 	
 	@Test
 	public void testParseInput() {
+		String fileName = "test.txt";
+		List<List<ZipCodeRange>> expected = new ArrayList<>();
+		List<ZipCodeRange> expected1 = new ArrayList<>();
+		List<ZipCodeRange> expected2 = new ArrayList<>();
+		ZipCodeRange zipExp1 = new ZipCodeRange(94133,94133);
+		ZipCodeRange zipExp2 = new ZipCodeRange(94200,94299);
+		ZipCodeRange zipExp3 = new ZipCodeRange(94400,94600);
+		expected1.add(zipExp1);
+		expected1.add(zipExp2);
+		expected1.add(zipExp3);
+		ZipCodeRange zipExp4 = new ZipCodeRange(94133,94133);
+		ZipCodeRange zipExp5 = new ZipCodeRange(94300,94399);
+		ZipCodeRange zipExp6 = new ZipCodeRange(94500,94900);
+		expected2.add(zipExp4);
+		expected2.add(zipExp5);
+		expected2.add(zipExp6);
+		expected.add(expected1);
+		expected.add(expected2);
+		List<List<ZipCodeRange>> actual = FileUtil.parseInput(fileName);
 		
+		Assert.assertEquals(expected, actual);
 	}
 	
 	@Test
