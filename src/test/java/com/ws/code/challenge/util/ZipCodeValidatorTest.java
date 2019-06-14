@@ -1,3 +1,14 @@
+package com.ws.code.challenge.util;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import com.ws.code.challenge.model.ZipCodeRange;
+
+
 /**
  * Test class for FileUtil
  * @author Swaroop Shivarudrappa
@@ -80,3 +91,5 @@ public class FileUtilTest {
 		inputs.add(zipRange1);
 		FileUtil.validateAndMap(inputs);
 	}
+
+}
