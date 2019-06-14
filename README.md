@@ -42,7 +42,9 @@ Step1 : Run mvn clean install
 
 Step2: mvn exec:java -Dexec.mainClass="com.ws.code.challenge.Main"
 
-The input can be provided in the file input.txt present in src/main/resources, the input format should be as follows [94133,94133] [94200,94299] [94400,94600], each zip code range should be presnt within [#####,#####] and no space after comma, and the next range shoudl be separated by space please follow the same inputs provided in input.txt
+The input can be provided in the file input.txt present in src/main/resources, the input format should be as follows [94133,94133] [94200,94299] [94400,94600], each zip code range should be presnt within [#####,#####] and no space after comma, and the next range shoudl be separated by space please follow the same inputs provided in input.txt. 
+
+NOTE : Everytime the input is modified you need to repeat step1 and Step2.
 
 The output is prinited to console as well as application.log file present in logs folder under the parent directory. The output will list all ther inputs and corresponding outputs
 
