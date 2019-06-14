@@ -20,12 +20,13 @@ import com.ws.code.challenge.util.ZipCodeRangeComparator;
 public class MinZipCodeRangeService {
 	
 	private final static Logger logger = Logger.getLogger(MinZipCodeRangeService.class);
+	private final static String INPUT_FILE = "input.txt";
 	
 	/**
 	 * Method to findMinZipCodeRange
 	 */
 	public static List<MinimizedZipCodeRangeResult> findMinZipCodeRange() {
-		List<List<ZipCodeRange>> input = FileUtil.parseInput();
+		List<List<ZipCodeRange>> input = FileUtil.parseInput(INPUT_FILE);
 		List<MinimizedZipCodeRangeResult> minimizedRanges = new ArrayList<>();
 		for(List<ZipCodeRange> list : input) {
 			List<ZipCodeRange> minimizedRange = validateRange(list);

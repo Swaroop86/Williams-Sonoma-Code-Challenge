@@ -25,11 +25,11 @@ public class FileUtil {
 	 * 
 	 * @return Returns a List of List containing valid ZipCode Ranges
 	 */
-	public static List<List<ZipCodeRange>> parseInput() {		
+	public static List<List<ZipCodeRange>> parseInput(String filename) {		
 		
 		List<String> input = null;
 		try {    
-			input = Files.readAllLines(Paths.get(FileUtil.class.getClassLoader().getResource("input.txt").toURI()));			
+			input = Files.readAllLines(Paths.get(FileUtil.class.getClassLoader().getResource(filename).toURI()));			
 		} catch (IOException e) {
 			logger.error("IO Exception while accessing the file: "+e);			
 		} catch(Exception e) {
